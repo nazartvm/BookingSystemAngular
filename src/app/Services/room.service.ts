@@ -10,7 +10,8 @@ import { Room } from '../Models/rooms.model';
   providedIn: 'root'
 })
 export class RoomService {
-  baseUrl="https://localhost:44393";
+  //baseUrl="https://localhost:44393";
+  baseUrl="https://indian-booking.azurewebsites.net";
   constructor(private http:HttpClient) { 
   }
   

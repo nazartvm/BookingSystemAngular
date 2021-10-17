@@ -8,7 +8,8 @@ import { response } from '../Models/response.model';
   providedIn: 'root'
 })
 export class LoginService {
-  baseUrl="https://localhost:44393";
+  //baseUrl="https://localhost:44393";
+  baseUrl="https://indian-booking.azurewebsites.net";
   loginData: Login = new Login();
   constructor(private http: HttpClient) { }
   
