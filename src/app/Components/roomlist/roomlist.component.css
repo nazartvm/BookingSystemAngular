@@ -1,0 +1,28 @@
+.roomlistmain{
+    padding: 2%;
+    margin-top: 8%;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+.firstcontainer{
+    display: flex;
+    justify-content: center;
+    padding: 2%;
+}
+.firstcontainer > *{
+   margin: 5px;
+}
+#datepicker{
+    width: 250px;
+    height: 45px;
+}
+.addroom{
+    width: 150px;
+    position: absolute;
+    right: 18px;
+    top: 10px;
+}
+.displaytext{
+    text-align: center;
+    color: red;
+}

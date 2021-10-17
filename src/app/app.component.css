@@ -1,0 +1,11 @@
+.wrapper{
+    background-color: #f8f9fa!important;
+}
+.container{
+    margin-top: 10%;
+}
+.header-logout{
+    position: absolute;
+    right: 12px;
+    top: 6px;
+}

@@ -1,0 +1,47 @@
+<div class="bg-white roomlistmain rounded box-shadow card">
+    <div class="firstcontainer">
+    <input class="form-control" id="datepicker" placeholder="yyyy-mm-dd"
+                   name="dp" [(ngModel)]="model" (ngModelChange)="onChange($event)" ngbDatepicker #d="ngbDatepicker">
+           
+                   <button type="button" class="btn btn-primary" (click)="d.toggle()">Pick a Date</button>
+      <!-- <pre>Model: {{ model | json }}</pre> -->
+    </div>
+    <button type="button" (click)="redirectcreation()" class="btn btn-info addroom">+ Add Room</button>
+    <p *ngIf="responseModel.length==0" class="displaytext">No details to display. Pick some other date</p>
+<table *ngIf="responseModel.length!=0" class="table">
+    <thead class="table-dark">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Room No</th>
+        <th scope="col">Room Type</th>
+        <th scope="col">Room Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- <tr>
+        <th scope="row">1</th>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>@mdo</td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>Jacob</td>
+        <td>Thornton</td>
+        <td>@fat</td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td>Larry</td>
+        <td>the Bird</td>
+        <td>@twitter</td>
+      </tr> -->
+      <tr *ngFor="let model of responseModel;let i=index">
+        <th scope="row">{{i+1}}</th>
+        <td>{{model.roomNumber}}</td>
+        <td>{{model.roomType==0?'Single':'Double'}}</td>
+        <td>{{model.roomStatus==true?'Booked':'-'}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
